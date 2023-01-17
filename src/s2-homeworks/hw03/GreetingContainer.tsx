@@ -1,53 +1,61 @@
-import React, { ChangeEvent, KeyboardEvent, useState } from 'react'
+import React, { ChangeEvent, KeyboardEvent, KeyboardEventHandler, useState } from 'react'
 import Greeting from './Greeting'
 import { UserType } from './HW3'
 
+
 type GreetingContainerPropsType = {
-    users: any // need to fix any
-    addUserCallback: any // need to fix any
+    users: UserType[]
+    addUserCallback: (name: string) => void
 }
 
+
 export const pureAddUser = (name: any, setError: any, setName: any, addUserCallback: any) => {
+    if (name) {
+        addUserCallback(name)}
+    else {
+        setError('Ошибка! Введите имя!');
+    }
+    setName('')
+    
     // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
 }
 
-export const pureOnBlur = (name: any, setError: any) => { // если имя пустое - показать ошибку
+
+export const pureOnBlur = (name: any, setError: any) => {
+    if (!name) {
+        setError('Ошибка! Введите имя!')}
 }
 
-export const pureOnEnter = (e: any, addUser: any) => { // если нажата кнопка Enter - добавить
+
+export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: ()=>void) => {
+    if (e.code === 'Enter') {addUser()}
 }
 
-// более простой и понятный для новичков
-// function GreetingContainer(props: GreetingPropsType) {
 
-// более современный и удобный для про :)
+
+
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     users,
     addUserCallback,
 }) => {
-    // деструктуризация пропсов
-    const [name, setName] = useState<any>('') // need to fix any
-    const [error, setError] = useState<any>('') // need to fix any
+    
+    const [name, setName] = useState<string>('')
+    const [error, setError] = useState<string>('')
 
-    const setNameCallback = (e: any) => { // need to fix any
-        setName('some name') // need to fix
+    const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
 
-        error && setError('')
-    }
-    const addUser = () => {
-        pureAddUser(name, setError, setName, addUserCallback)
+        setName(e.currentTarget.value)
+        error && setError('') // ???
     }
 
-    const onBlur = () => {
-        pureOnBlur(name, setError)
-    }
+    const addUser = () => { pureAddUser(name, setError, setName, addUserCallback) }
 
-    const onEnter = (e: any) => {
-        pureOnEnter(e, addUser)
-    }
+    const onBlur = () => { pureOnBlur(name, setError) }
 
-    const totalUsers = 0 // need to fix
-    const lastUserName = 'some name' // need to fix
+    const onEnter = (e: KeyboardEvent<HTMLInputElement>) => { pureOnEnter(e, addUser) } // ?? Image
+
+    const totalUsers = 0 || users.length; 
+    const lastUserName = users.length ? users[users.length-1].name : '' ;
 
     return (
         <Greeting
