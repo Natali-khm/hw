@@ -9,7 +9,7 @@ type GreetingPropsType = {
     onEnter: (e: KeyboardEvent<HTMLInputElement>) => void
     error: string
     totalUsers: number
-    lastUserName?: string
+    lastUserName?: string | boolean
 }
 
 
@@ -27,7 +27,7 @@ const Greeting: React.FC<GreetingPropsType> = (
         lastUserName,
     } 
 ) => {
-    const inputClass = error === 'Ошибка! Введите имя!' ? s.errorInput : s.input// // need to fix with (?:)
+    const inputClass = error !== 'Ошибка! Введите имя!' ? s.input : s.errorInput + ' ' + s.input;
     
     return (
         <div id={'hw3-form'} className={s.greetingForm}>
@@ -60,7 +60,7 @@ const Greeting: React.FC<GreetingPropsType> = (
                     disabled={!name.trim()}
                 >
                     Add
-                </button>
+                </button> 
             </div>
 
             {lastUserName && (

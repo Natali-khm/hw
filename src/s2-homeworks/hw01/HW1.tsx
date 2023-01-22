@@ -58,9 +58,9 @@ export const friendMessage0: MessageType = {
 
 const HW1 = () => {
     return (
-        <div id={'hw1'} style={{maxWidth: '800px', margin: '0 auto'}}>
+        <div id={'hw1'}>
             <div className={s2.hwTitle}>Homework #1</div>
-            <div className={s2.hw} style={{display: 'flex', flexDirection: 'column'}}>
+            <div className={s2.hw} style={{display: 'flex', flexDirection: 'column', maxWidth: '800px'}}>
                 {/*проверка отображения (не менять)*/}
                 <div>
                     <Message message={message0}/>
