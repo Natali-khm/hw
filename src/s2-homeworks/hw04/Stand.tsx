@@ -19,8 +19,10 @@ const Stand = () => {
                         id={'hw4-super-input-like-old'}
                         value={stateForAllInputs}
                         onChange={(e) => setValue(e.currentTarget.value)}
+                        // className = {' '}
                     />
                 </div>
+
                 {/*инпут с ошибкой:*/}
                 <div>
                     <SuperInputText
@@ -36,23 +38,30 @@ const Stand = () => {
                             )
                             setValue('')
                         }}
+                        // spanClassName = {'big'}                
                     />
                 </div>
             </div>
 
             <div className={s.buttons}>
+
+
                 {/*обычная кнопка:*/}
                 <div>
                     <SuperButton id={'hw4-super-button-default'}>
                         default
                     </SuperButton>
                 </div>
+
+
                 {/*красная кнопка:*/}
                 <div>
                     <SuperButton id={'hw4-super-button-red'} xType={'red'}>
                         red
                     </SuperButton>
                 </div>
+
+
                 {/*задизэйбленная кнопка:*/}
                 <div>
                     <SuperButton
@@ -63,6 +72,8 @@ const Stand = () => {
                         disabled
                     </SuperButton>
                 </div>
+
+
                 {/*задизэйбленная кнопка:*/}
                 <div>
                     <SuperButton
@@ -74,7 +85,10 @@ const Stand = () => {
                 </div>
             </div>
 
+
+
             <div className={s.checkboxes}>
+
                 {/*чекбокс с текстом:*/}
                 <div>
                     <SuperCheckbox
@@ -85,6 +99,8 @@ const Stand = () => {
                         some text
                     </SuperCheckbox>
                 </div>
+
+
                 {/*совместим со старым кодом:*/}
                 <div>
                     <SuperCheckbox
