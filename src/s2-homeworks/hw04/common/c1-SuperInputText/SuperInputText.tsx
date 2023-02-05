@@ -20,10 +20,8 @@ type SuperInputTextPropsType = Omit<DefaultInputPropsType, 'type'> & {
     onEnter?: () => void
     error?: ReactNode
     spanClassName?: string
+    macha?:string
 }
-
-
-
 
 const SuperInputText: React.FC<SuperInputTextPropsType> = (
     {
@@ -35,9 +33,10 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
         className,
         spanClassName,
         id,
-
+        macha,
         ...restProps // все остальные пропсы попадут в объект restProps
     }
+    
 ) => {
 
     
@@ -55,6 +54,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
         onEnter() // то вызвать его
     }
 
+
     const finalSpanClassName = s.error
         + (spanClassName ? ' ' + spanClassName : '')
         
@@ -63,7 +63,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
         + (className ? ' ' + s.className : '') // задача на смешивание классов
 
     return (
-        <div className={s.inputWrapper}>
+        <div className={''}>
             <span
                 id={id ? id + '-span' : undefined}
                 className={finalSpanClassName}

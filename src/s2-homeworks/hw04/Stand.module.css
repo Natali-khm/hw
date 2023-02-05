@@ -21,3 +21,12 @@
     flex-direction: column;
     gap: 36px;
 }
+
+.red{
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
