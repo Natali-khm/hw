@@ -2,10 +2,17 @@
 }
 
 .span {
+    margin-left: 10px;
 }
 
 .input {
+    width: 276px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 24px;
 }
 
 .pen {
+    vertical-align: middle;
 }

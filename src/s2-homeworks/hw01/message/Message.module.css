@@ -52,6 +52,7 @@
   font-family: "Montserrat", sans-serif;
   white-space: pre-wrap;
   width: 100%;
+  word-break: break-word;
 }
 
 .time {
