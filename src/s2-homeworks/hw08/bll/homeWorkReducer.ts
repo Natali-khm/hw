@@ -18,7 +18,7 @@ export const homeWorkReducer = (state: UserType[], action: ActionType): UserType
             throw new Error('action sort type error') 
         }
         case 'check': {
-            return state.filter((u => u.age >= 18)).sort((a, b) => a.age > b.age ? 1 : -1) 
+            return state.filter((u => u.age >= 18))
         }
         default:
             throw new Error('action type error') 
