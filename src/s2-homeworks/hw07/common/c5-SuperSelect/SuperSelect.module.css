@@ -20,8 +20,5 @@
 
 
 .option:hover {
-    /* cursor: pointer;
-    background-color: red; */
-    background: olive linear-gradient(olive, olive);
-    color: blue;
+
 }

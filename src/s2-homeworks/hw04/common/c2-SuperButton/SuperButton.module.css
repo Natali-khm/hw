@@ -11,6 +11,7 @@
     align-items: center;
     padding: 5px 24px;
     gap: 10px;
+    font-family: 'Montserrat', serif;
 }
 
 .disabled {
@@ -23,6 +24,7 @@
     background-color: white;
     border: 1px solid #0066CC;
     color: #0066CC;
+
 }
 
 .default {
