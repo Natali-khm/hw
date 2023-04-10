@@ -39,15 +39,14 @@ const HW12 = () => {
                 Homework #12
             </div>
 
-            <div className={s2.hw}>
+            <div className = {s2.hw}>
                 <div className = {s.text}>Выберите тему</div>
                 <SuperSelect
-                    id={'hw12-select-theme'}
-                    className={s.select}
+                    id = {'hw12-select-theme'}
+                    className = {s.select}
                     options = {themes}
-                    onChange={(e) => change(+e.currentTarget.value)}
+                    onChange = {(e) => change(+e.currentTarget.value)}
                     // сделать переключение тем
-
                 />
             </div>
         </div>
