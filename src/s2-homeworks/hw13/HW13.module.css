@@ -1,16 +1,14 @@
 .buttonsContainer {
-    display: flex;
-    gap: 25px;
-    /* border: 1px solid; */
-
+  display: flex;
+  gap: 25px;
 }
 
 .responseContainer {
-    margin-top: 90px;
-    /* border: 1px solid red; */
-    display: flex;
-    justify-content: center;
-    gap: 90px;
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  min-height: 300px;
 }
 
 .imageContainer {
@@ -19,22 +17,19 @@
 .image {
 }
 
-.textContainer{
-    /* border: 1px solid blue; */
-    font-size: 16px;
-        font-weight: 500;
-        width: 510px;
-        align-self: center;
+.textContainer {
+  font-size: 16px;
+  font-weight: 500;
+  width: 510px;
+  align-self: center;
 }
 
 .code {
-    font-size: 30px;
-    margin-bottom: 13px;
+  font-size: 30px;
+  margin-bottom: 13px;
 }
 
 .text {
-    /* border: 1px solid; */
-
 }
 .info {
 }
