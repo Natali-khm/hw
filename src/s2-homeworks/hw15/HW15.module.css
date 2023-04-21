@@ -1,27 +1,55 @@
+.container {
+  max-width: 606px;
+  position: relative;
+}
+
 .tech {
-    width: 50vw;
+  width: 303px;
 }
 
 .developer {
-
+  width: 303px;
 }
 
 .techHeader {
-    width: 50vw;
+  width: 303px;
+  font-size: 14px;
 }
 
 .developerHeader {
-
+  display: flex;
+  width: 303px;
+  font-size: 14px;
 }
 
 .row {
-    display: flex;
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 12px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.row:last-of-type{
+    border-bottom: none
 }
 
 .rowHeader {
-    display: flex;
+  display: flex;
+  background-color: #f3f0f0;
+  padding: 11px 12px 9px;
+  font-weight: 600;
+  margin-top: 39px;
 }
 
 .loading {
-
+  position: absolute;
+  background-color: white;
+  opacity: 80%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }

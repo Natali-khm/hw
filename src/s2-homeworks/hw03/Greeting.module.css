@@ -1,5 +1,6 @@
 .greetingForm {
     margin: 10px;
+    min-height: 120px;
 }
 
 .inputAndButtonContainer {
@@ -11,6 +12,7 @@
 .error {
     color: red;
     margin-top: 7px;
+    height: 20px;
 }
 
 .input {

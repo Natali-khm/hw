@@ -74,7 +74,7 @@ const HW14 = () => {
                     {isLoading ? '...ищем' : <br/>}
                 </div>
 
-                {mappedTechs}
+                <div className={s.container}>{mappedTechs}</div>
             </div>
         </div>
     )

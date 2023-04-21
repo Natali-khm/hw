@@ -52,4 +52,6 @@
     gap: 17px;
     flex-wrap: wrap;
     max-width: 450px;
+    min-height: 155px;
+    align-items: flex-start;
 }

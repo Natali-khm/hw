@@ -1,11 +1,20 @@
 .pagination {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .text1 {
-
+    margin-left: 15px;
 }
 
 .text2 {
+}
+
+.test{
+    width: 60px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-color:  #ECEBEB
 
 }

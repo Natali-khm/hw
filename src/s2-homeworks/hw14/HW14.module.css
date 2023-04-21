@@ -9,3 +9,7 @@
     font-weight: 300;
     color: #4D4D4D;
 }
+
+.container{
+    min-height: 130px;
+}
